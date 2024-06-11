@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --purple-light-color: #BB99DD;
+    --white-color: #ffffff;
+    --highlight-color: rgba(0, 0, 0, 0.1);
+}
+
+html, body {
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+.container {
+    max-width: 48rem;
+    margin: 0 auto;
+    text-align: center;
+
+    padding: 4.8rem 1.6rem 0;
+}
+
+ ul li {
+    list-style: none;
+}
+
+/* Profile */
+
+section.profile img {
+    width: 20rem;
+    height: 20rem;
+    object-fit: cover;
+    border-radius: 50%;
+    padding: .6rem;
+
+    border: 2px solid var(--purple-light-color);
+}
+
+section.profile h3 {
+    font-size: 1.6rem;
+    font-weight: 300;
+
+    color: var(--purple-light-color);
+
+    margin: 1.6rem 0 3.2rem;
+}
+
+/* Links */
+
+section.links ul li {
+    width: 100%;
+    transition: 0.2s;
+}
+
+section.links ul li a {
+    border: 3px solid var(--purple-light-color);
+    border-radius: 4px;
+
+    padding: 1.2rem 0;
+
+    margin-bottom: 1.6rem;
+
+    display: block;
+    width: 100%;
+
+    color: var(--purple-light-color);
+    text-decoration: none;
+    font-weight: 600;
+    
+    text-transform: uppercase;
+
+    transition: 0.2s;
+}
+
+section.links ul li:hover {
+    background: var(--purple-light-color);
+}
+
+section.links ul li a:hover {
+    color: var(--white-color);
+}
+
+/* Social Media */
+
+section.social-media {
+    margin: 6.8rem 0 3.4rem;
+}
+
+section.social-media ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    gap: 2.8rem;
+}
+
+section.social-media ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    padding: 1.6rem;
+
+    transition: 0.2s;
+}
+
+section.social-media ul li a:hover {
+    background: var(--highlight-color);
+}
+
+/* Animations */
+
+.profile, .links, .social-media {
+    animation: appear var(--delay);
+}
+
+@keyframes appear {
+    from {
+        transform: scale(0.75);
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
